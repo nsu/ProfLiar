@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Professor Liar</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26275906-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  </script>
+
+  </head>
+  <body>
+
+
+
+    <div class="container" ng-app="myApp">
+        <div style="text-align:center; padding-top: 40px; padding-bottom: 40px" class="hero-unit">
+            <div ng-controller="FirstCtrl">
+            <svg width="400px" height="200px" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <circle cx="200" cy="100" r="60" fill="none" stroke="lightsteelblue" stroke-width="10"  />
+              <circle cx="200" cy="100" r="{{counter}}" fill="none" stroke="steelblue" stroke-width="10"  />
+            </svg>
+            <h1>{{data.message}}</h1>
+            <br /><br />
+            <button ng-click="newRound()" class="btn btn-large btn-primary">{{data.buttontext}}</button>
+            </div>
+        </div>
+
+      <div class="row">
+        <div class="span4">
+          <h2>Start</h2>
+          <p>Split into teams. Each round, a team selects a “Professor” from its group. The Professor clicks the button to determine what he is a professor of. The professor then stands before all players of opposing teams. The latter group is called “The Examiners.”</p>
+        </div>
+        <div class="span4">
+          <h2>Play</h2>
+          <p>The Professor must answer any question put forth by the examiners for 90 seconds. </p>
+       </div>
+        <div class="span4">
+          <h2>Lose</h2>
+          <p>The Professor loses if at any point she
+            <ul class="unstyled">
+              <li>Hesitates</li>
+              <li>Contradicts herself</li>
+              <li>Misspeaks or Stumbles verbally</li>
+              <li>Fails to answer the question</li>
+              <li>Laughs</li>
+              <li>Says "um"</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
